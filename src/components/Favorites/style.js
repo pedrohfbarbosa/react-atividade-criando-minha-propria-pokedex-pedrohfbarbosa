@@ -6,6 +6,7 @@ export const FavoriteStyled = styled(ContainerMinor)`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   max-height: 35rem;
   padding: 2rem 1rem;
