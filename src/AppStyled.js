@@ -9,4 +9,12 @@ export const AppStyled = styled.div`
     display: flex;
     justify-content: space-between;
   }
+
+  @media (max-width: 900px) {
+    & > div {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
 `;

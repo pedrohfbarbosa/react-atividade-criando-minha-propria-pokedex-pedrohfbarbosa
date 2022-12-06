@@ -13,6 +13,14 @@ export const HeaderStyled = styled.header`
     gap: 1rem;
   }
 
+  @media (max-width: 900px) {
+    margin-bottom: 1rem;
+    & > div > div {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
   & h1 {
     font-size: 4.8125rem;
     font-weight: 700;
