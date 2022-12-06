@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { FavoritesContext } from "../../Providers/FavoritesProvider";
-import { ContainerMinor } from "../../styles/ContainerMinor";
-import { FavoriteCard } from "./FavoriteCard";
+import { PokemonCard } from "../PokemonCard";
 import { FavoriteStyled } from "./style";
 
 export const Favorites = () => {
-  const { favoritesList } = useContext(FavoritesContext);
+  const { favoritesList, removeFavorite } = useContext(FavoritesContext);
   return (
     <FavoriteStyled>
       <h2>Meus Pokemons</h2>
@@ -14,7 +13,12 @@ export const Favorites = () => {
       ) : (
         <ul>
           {favoritesList.map((e) => (
-            <FavoriteCard key={e.id} pokemon={e} />
+            <PokemonCard
+              key={e.id}
+              pokemon={e}
+              handleClick={() => removeFavorite(e.id)}
+              btnMessage="Remover"
+            />
           ))}
         </ul>
       )}
